@@ -2,7 +2,7 @@
 $host="localhost";
 $user="root";
 $pass="";
-$db="LOG_db";
+$db="UP_db";
 
 $conn=new mysqli($host,$user,$pass,$db);
 

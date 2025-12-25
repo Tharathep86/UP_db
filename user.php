@@ -19,7 +19,7 @@ if($_SESSION['role'] != 'user'){ header("Location: admin.php"); exit(); }
 <div class="max-w-3xl mx-auto bg-white p-8 shadow-lg rounded-xl">
 <h2 class="text-2xl font-bold mb-4">ยินดีต้อนรับ User</h2>
 <p class="text-gray-700">ผู้ใช้งาน: <b><?php echo $_SESSION['username']; ?></b></p>
-<a href="user_product.php" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">ดูสินค้า</a>
+
 </div>
 </body>
 </html>

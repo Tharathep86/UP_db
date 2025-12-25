@@ -20,8 +20,8 @@ $conn=new mysqli($host,$user,$pass);
 if($conn->connect_error){
     echo "<p class='text-red-600 font-medium'>เชื่อมต่อฐานข้อมูลไม่ได้</p>";
 } else {
-    $conn->query("CREATE DATABASE IF NOT EXISTS UP_db");
-    $conn->select_db("UP_db");
+    $conn->query("CREATE DATABASE IF NOT EXISTS LOG_db");
+    $conn->select_db("LOG_db");
 
     // ตาราง users
     $conn->query("CREATE TABLE IF NOT EXISTS users (
@@ -29,15 +29,6 @@ if($conn->connect_error){
         username VARCHAR(100),
         password VARCHAR(255),
         role ENUM('admin','user'),
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    )");
-
-    // ตาราง products
-    $conn->query("CREATE TABLE IF NOT EXISTS products (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        name VARCHAR(255) NOT NULL,
-        description TEXT,
-        price DECIMAL(10,2) NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )");
 
